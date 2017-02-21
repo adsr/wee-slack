@@ -2167,6 +2167,7 @@ def buffer_switch_cb(signal, sig_type, data):
 
 
 def typing_notification_cb(signal, sig_type, data):
+    return w.WEECHAT_RC_OK
     msg = w.buffer_get_string(data, "input")
     if len(msg) > 8 and msg[:1] != "/":
         global typing_timer
